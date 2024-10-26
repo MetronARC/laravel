@@ -18,7 +18,7 @@
                 <!-- img src url path is wrong ( line 20 is the wrong code) -->
                 <h1><img src="{{ asset('public/assets/images/marinternet.png') }}" alt="Logo" class="logo"></h1>
                 <!-- <h1><img src="{{ asset('assets/images/marinternet.png') }}" alt="Logo" class="logo"></h1> -->
-                <h4>Ship Data Monitoring System</h4>
+                <h4>Ship Data Monitoring Systemz</h4>
                 <form action="#">
                     <div class="input-field">
                         <input type="text" placeholder="Username" required>
