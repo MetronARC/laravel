@@ -5,7 +5,9 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Login Page 1</title>
+    <!-- css style sheet url path is wrong ( line 10 is the wrong code) -->
     <link rel="stylesheet" href="{{ asset('public/assets/css/style.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
 </head>
 
@@ -13,7 +15,9 @@
     <div class="container">
         <div class="form">
             <div class="form_login">
+                <!-- img src url path is wrong ( line 20 is the wrong code) -->
                 <h1><img src="{{ asset('public/assets/images/marinternet.png') }}" alt="Logo" class="logo"></h1>
+                <!-- <h1><img src="{{ asset('assets/images/marinternet.png') }}" alt="Logo" class="logo"></h1> -->
                 <h4>Ship Data Monitoring System</h4>
                 <form action="#">
                     <div class="input-field">

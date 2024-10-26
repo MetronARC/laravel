@@ -23,7 +23,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
+    /* backround url is using a wrong url path ( line 28 is the wrong code) */
     background: url('../../assets/images/sunset.jpeg') no-repeat;
+    /* background: url('/assets/images/sunset.jpeg') no-repeat; */
     background-size: cover;
     background-position: center;
     opacity: 0.5;
