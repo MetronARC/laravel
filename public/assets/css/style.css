@@ -23,22 +23,33 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/assets/images/ship.jpg') no-repeat;
+    background: url('/assets/images/sunset.jpeg') no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: 0.5; /* Adjust the transparency (0.0 to 1.0) */
-    z-index: -1; /* Ensure the image stays in the background */
+    opacity: 0.5;
+    z-index: -1;
 }
 
-.wrapper {
-    width: 420px;
+.container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
     background: #fff;
-    color: #000;
     border-radius: 10px;
-    padding: 30px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.wrapper h1 {
+.container .form{
+    padding: 30px;
+}
+
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.container .form h1{
     font-size: 36px;
     text-align: center;
     text-align: center;
@@ -48,72 +59,123 @@ body::before {
     align-items: center;
 }
 
-.wrapper .logo {
-    width: 100px;  /* Adjust the size as needed */
-    height: auto;  /* Maintain the aspect ratio */
+.container .form h4{
+    font-size: 16px;
+    text-align: center;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .form .logo{
+    width: 100px; 
+    height: auto;
     display: block;
 }
 
-.wrapper .input-box {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
-}
-
-.input-box input {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(18, 5, 5, 0.364);
-    border-radius: 40px;
-    font-size: 16px;
-    color: #000;
-    padding: 20px 45px 20px 20px;
-}
-
-.input-box input::placeholder {
-    color:#000;
-}
-
-.input-box i {
+.form .title::before{
+    content: '';
     position: absolute;
-    right: 20px;
-    top: 30%;
-    transform: translate(-50%);
-    font-size: 20px;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
 }
 
-.wrapper .btn {
+.form .input-field{
+    position: relative;
+    height: 50px;
     width: 100%;
-    height: 45px;
-    background: teal;
+    margin-top: 30px;
+
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
     border: none;
     outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
-    cursor: pointer;
     font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #4070f4;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+}
+
+.input-field i.icon{
+    left: 0;
+}
+
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+margin: 0 8px -2px 4px;
+accent-color: #4070f4;
+}
+
+.form .text{
     color: #333;
-    font-weight: 600;
+    font-size: 14px;
 }
 
-.wrapper .forgot-link {
-    font-size: 14.5px;
-    text-align: center;
-    margin: 20px 0 15px;
-
-}
-
-.forgot-link p a {
-    color: #000;
+.form a.text{
     text-decoration: none;
-    font-weight: 600;
 }
 
-.register-link p a:hover {
+.form a:hover{
     text-decoration: underline;
+}
 
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #245cf9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.button input:hover{
+    background-color: #052d9e;
 }
